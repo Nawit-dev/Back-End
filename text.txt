@@ -1,2 +1,0 @@
-cd ~/docker_project
-pc@NUC7i:~/docker_project$ docker compose up
