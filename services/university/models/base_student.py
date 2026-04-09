@@ -5,22 +5,18 @@ from pydantic import EmailStr
 
 
 class DegreeEnum(StrEnum):
-   ASSOCIATE = "Associate"
-   BACHELOR = "Bachelor"
-   MASTER = "Master"
-   DOCTORATE = "Doctorate"
-
+    ASSOCIATE = "Associate"
+    BACHELOR = "Bachelor"
+    MASTER = "Master"
+    DOCTORATE = "Doctorate"
 
 
 class BaseStudent(BaseModel):
-
     model_config = ConfigDict(extra="forbid")
 
-    name: str
     first_name: str
     last_name: str
     email: EmailStr
     degree: DegreeEnum
     phone: str
     group_id: int
-

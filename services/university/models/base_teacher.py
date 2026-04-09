@@ -2,6 +2,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, ConfigDict
 
+
 class Subjects(StrEnum):
     MATHEMATICS = "Mathematics"
     PHYSICS = "Physics"
@@ -9,8 +10,8 @@ class Subjects(StrEnum):
     BIOLOGY = "Biology"
     GEOGRAPHY = "Geography"
 
-class BaseTeacher(BaseModel):
 
+class BaseTeacher(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     first_name: str

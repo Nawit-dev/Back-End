@@ -14,6 +14,7 @@ def log_response(func):
         body = json.dumps(response.json(), indent=2) if JsonUtils.is_json(response.text) else response.text
         Logger.info(f"Response status code: {response.status_code}, elapsed_time= '{response.elapsed}' \n {body}\n")
         return response
+
     return _log_response
 
 
@@ -29,7 +30,6 @@ class ApiUtils:
     def get(self, endpoint_url, **kwargs):
         response = self.session.get(self.url + endpoint_url, **kwargs)
         return response
-
 
     @log_response
     def post(self, endpoint_url, data=None, json=None, **kwargs):

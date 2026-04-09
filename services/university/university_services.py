@@ -1,6 +1,9 @@
 from services.general.base_services import BaseService
 from services.university.helpers.group_helper import GroupHelper
 from services.university.helpers.student_helper import StudentHelper
+from services.university.helpers.grades_helper import GradesHelper
+from services.university.models.grades_request import GradesRequest
+from services.university.models.grades_responses import GradesResponses
 from services.university.models.group_response import GroupResponse
 from services.university.models.group_request import GroupRequest
 from services.university.models.student_request import StudentRequest
@@ -19,9 +22,9 @@ class UniversityServices(BaseService):
         self.group_helper = GroupHelper(self.api_utils)
         self.student_helper = StudentHelper(self.api_utils)
         self.teacher_helper = TeacherHelper(self.api_utils)
+        self.grades_helper = GradesHelper(self.api_utils)
 
-
-    def creat_group(self,group_request: GroupRequest) -> GroupResponse:
+    def creat_group(self, group_request: GroupRequest) -> GroupResponse:
         response = self.group_helper.post_group(json=group_request.model_dump())
         return GroupResponse(**response.json())
 
@@ -31,4 +34,16 @@ class UniversityServices(BaseService):
 
     def creat_teacher(self, teacher_request: TeacherRequest) -> TeacherResponse:
         response = self.teacher_helper.post_teacher(json=teacher_request.model_dump())
-        return  TeacherResponse(**response.json())
+        return TeacherResponse(**response.json())
+
+    def creat_grades(self, grades_request: GradesRequest) -> GradesResponses:
+        response = self.grades_helper.post_grades(data=grades_request.model_dump())
+        return GradesResponses(**response.json())
+
+    def get_grades(self) -> GradesResponses:
+        response = self.grades_helper.get_grades()
+        return response.json()
+
+    def get_stats_grades(self) -> GradesResponses:
+        response = self.grades_helper.get_stats()
+        return response.json()

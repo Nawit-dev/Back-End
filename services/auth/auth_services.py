@@ -7,6 +7,7 @@ from services.auth.models.register_request import RegisterRequest
 from services.general.models.success_response import SuccessResponse
 from utils.api_utils import ApiUtils
 
+
 class AuthServices(BaseService):
     SERVICE_URL = "http://192.168.0.104:8000"
 
@@ -18,7 +19,6 @@ class AuthServices(BaseService):
     def register_user(self, register_request: RegisterRequest) -> SuccessResponse:
         response = self.authorization_helper.post_register(data=register_request.model_dump())
         return SuccessResponse(**response.json())
-
 
     def login_user(self, login_request: LoginRequest) -> LoginResponse:
         response = self.authorization_helper.post_login(data=login_request.model_dump())
