@@ -15,7 +15,7 @@ from services.university.models.base_teacher import Subjects
 from services.university.models.group_request import GroupRequest
 from services.university.models.student_request import StudentRequest
 from services.university.models.teacher_request import TeacherRequest
-from services.university.university_services import UniversityServices
+from services.university.university_services import UniversityService
 from utils.api_utils import ApiUtils
 
 faker = Faker()
@@ -45,7 +45,7 @@ def auth_service_readiness():
 
 @pytest.fixture(scope="function")
 def university_api_utils_anonym():
-    api_utils = ApiUtils(url=UniversityServices.SERVICE_URL)
+    api_utils = ApiUtils(url=UniversityService.SERVICE_URL)
     return api_utils
 
 
@@ -75,13 +75,13 @@ def auth_api_utils_admin(access_token):
 
 @pytest.fixture(scope="function")
 def university_api_utils_admin(access_token):
-    api_utils = ApiUtils(url=UniversityServices.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
+    api_utils = ApiUtils(url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
 
 
 @pytest.fixture(scope="function")
 def group(university_api_utils_admin):
-    university_services = UniversityServices(api_utils=university_api_utils_admin)
+    university_services = UniversityService(api_utils=university_api_utils_admin)
     group = GroupRequest(name=faker.name())
     group_response = university_services.creat_group(group_request=group)
     return group_response
@@ -89,7 +89,7 @@ def group(university_api_utils_admin):
 
 @pytest.fixture(scope="function")
 def teacher(university_api_utils_admin):
-    university_services = UniversityServices(api_utils=university_api_utils_admin)
+    university_services = UniversityService(api_utils=university_api_utils_admin)
     teacher = TeacherRequest(first_name=faker.first_name(),
                              last_name=faker.last_name(),
                              subject=random.choice([subject.value for subject in Subjects]))
@@ -99,7 +99,7 @@ def teacher(university_api_utils_admin):
 
 @pytest.fixture(scope="function")
 def student(university_api_utils_admin, group):
-    university_services = UniversityServices(api_utils=university_api_utils_admin)
+    university_services = UniversityService(api_utils=university_api_utils_admin)
     student = StudentRequest(
         first_name=faker.first_name(),
         last_name=faker.last_name(),

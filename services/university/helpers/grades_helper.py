@@ -17,5 +17,5 @@ class GradesHelper(BaseHelper):
         return response
 
     def get_stats(self, params: dict | None = None) -> requests.Response:
-        response = self.api_utils.get(self.STATS_ENDPOINT,params=params)
+        response = self.api_utils.get(self.STATS_ENDPOINT, params=params)
         return response

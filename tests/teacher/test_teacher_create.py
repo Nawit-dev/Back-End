@@ -19,5 +19,5 @@ class TestTeacherCreate:
                                                         })
 
         assert teacher_response.status_code == requests.status_codes.codes.unauthorized, (
-            f"Wrong status code. Actual: '{teacher_response.status_code}', "
+            f"Wrong status code. Actual: '{teacher_response.status_code}',"
             f"but expected: '{requests.status_codes.codes.unauthorized}'")
