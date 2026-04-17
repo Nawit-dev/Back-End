@@ -35,7 +35,7 @@ def auth_service_readiness():
         try:
             response = requests.get(AuthServices.SERVICE_URL + "/docs")
             response.raise_for_status()
-        except:
+        except requests.exceptions.RequestException:
             time.sleep(1)
         else:
             break

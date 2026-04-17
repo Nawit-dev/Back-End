@@ -24,5 +24,5 @@ class TestGradesCreat:
         sa(grades_responses.student_id == grade.student_id,
            f"Expected student_id={grade.student_id}, got {grades_responses.student_id}")
         sa(grades_responses.grade == grade.grade, f"Expected grade={grade.grade}, got {grades_responses.grade}")
-        sa(grades_responses.id is not None, f"Expected id to be set, got None")
+        sa(grades_responses.id is not None, "Expected id to be set, got None")
         sa.finalize()
