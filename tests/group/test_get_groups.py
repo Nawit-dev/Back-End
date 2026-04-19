@@ -1,7 +1,6 @@
 from services.university.models.group_request import GroupRequest, GroupDetailRequest
 from services.university.university_services import UniversityService
 from faker import Faker
-import allure
 from utils.soft_assert import SoftAssert
 
 faker = Faker()

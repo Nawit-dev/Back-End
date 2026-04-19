@@ -1,7 +1,6 @@
 import random
 import allure
 
-from logger.logger import Logger
 from services.university.models.grade_limits import GradeLimits
 from services.university.models.grades_request import GradesRequest
 from services.university.models.grades_stats_request import GradesStatsRequest

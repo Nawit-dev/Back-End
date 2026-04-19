@@ -1,4 +1,3 @@
-import requests
 import allure
 from http import HTTPStatus
 from services.university.helpers.grades_helper import GradesHelper
