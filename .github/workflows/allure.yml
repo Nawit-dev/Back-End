@@ -2,7 +2,7 @@ name: Allure Report
 
 on:
   push:
-    branches: [ main ]
+    branches: [ review ]
 
 permissions:
   contents: read
