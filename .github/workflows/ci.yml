@@ -11,9 +11,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Ruff
+      # линтер
       - name: Install Ruff
         run: pip install ruff
 
       - name: Run Ruff
         run: ruff check .
+
+      # Docker
+      - name: Build services
+        run: docker compose build
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for services
+        run: sleep 15
+
+      - name: Run tests
+        run: docker compose run --rm auth pytest -v
+
+      - name: Stop services
+        run: docker compose down

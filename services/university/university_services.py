@@ -14,10 +14,12 @@ from services.university.models.teacher_request import TeacherRequest
 from services.university.models.teacher_response import TeacherResponse
 from services.university.helpers.teacher_helper import TeacherHelper
 from utils.api_utils import ApiUtils
+import os
 
 
 class UniversityService(BaseService):
-    SERVICE_URL = "http://192.168.0.104:8001"
+    SERVICE_URL = os.getenv("SERVICE_URL", "http://192.168.0.104:8001")
+
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)
