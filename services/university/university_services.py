@@ -20,7 +20,10 @@ from services.university.models.teacher_response import TeacherResponse
 
 
 class UniversityService(BaseService):
-    SERVICE_URL = os.getenv("SERVICE_URL", "http://192.168.0.104:8001")
+    SERVICE_URL = os.getenv(
+        "UNIVERSITY_SERVICE_API_URL",
+        "http://university:8000"
+    )
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)
@@ -59,7 +62,7 @@ class UniversityService(BaseService):
 
     def get_grades(self) -> list[GradesResponses]:
         response = self.grades_helper.get_grades().json()
-        return [GradesResponses.model_validate(x) for x in response]
+        return [GradesResponses(**x) for x in response]
 
     def get_stats_grades(self, grades_stats_request: GradesStatsRequest) -> GradesStatsResponse:
         response = self.grades_helper.get_stats(params=grades_stats_request.model_dump())
