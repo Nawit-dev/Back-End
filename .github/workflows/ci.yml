@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -65,10 +68,15 @@ jobs:
       - name: Generate Allure report
         if: always()
         run: |
-          allure generate allure-results -o allure-report --clean
+          if [ -d "allure-results" ]; then
+            allure generate allure-results -o allure-report --clean
+          else
+            echo "No allure results found"
+          fi
 
       # 7. Deploy to GitHub Pages
       - name: Deploy report
+        if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
