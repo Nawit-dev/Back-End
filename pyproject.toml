@@ -4,6 +4,8 @@ version = "0.1.0"
 description = ""
 authors = ["Nikita"]
 
+python = ">=3.12,<4.0"
+
 [tool.poetry.group.dev.dependencies]
 pytest = "^9.0.2"
 email-validator = "^2.3.0"
