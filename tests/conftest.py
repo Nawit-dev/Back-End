@@ -1,13 +1,10 @@
-import time
 import random
+import time
 
 import pytest
 import requests
-
 from faker import Faker
-
 from services.auth.auth_services import AuthServices
-
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.register_request import RegisterRequest
 from services.university.models.base_student import DegreeEnum
@@ -53,16 +50,12 @@ def university_api_utils_anonym():
 def access_token(auth_api_utils_anonym):
     auth_services = AuthServices(auth_api_utils_anonym)
     username = faker.user_name()
-    password = faker.password(length=30,
-                              special_chars=True,
-                              digits=True,
-                              upper_case=True,
-                              lower_case=True)
-    auth_services.register_user(register_request=RegisterRequest(
-        username=username,
-        password=password,
-        password_repeat=password,
-        email=faker.email()))
+    password = faker.password(length=30, special_chars=True, digits=True, upper_case=True, lower_case=True)
+    auth_services.register_user(
+        register_request=RegisterRequest(
+            username=username, password=password, password_repeat=password, email=faker.email()
+        )
+    )
     login_response = auth_services.login_user(login_request=LoginRequest(username=username, password=password))
     return login_response.access_token
 
@@ -90,9 +83,11 @@ def group(university_api_utils_admin):
 @pytest.fixture(scope="function")
 def teacher(university_api_utils_admin):
     university_services = UniversityService(api_utils=university_api_utils_admin)
-    teacher = TeacherRequest(first_name=faker.first_name(),
-                             last_name=faker.last_name(),
-                             subject=random.choice([subject.value for subject in Subjects]))
+    teacher = TeacherRequest(
+        first_name=faker.first_name(),
+        last_name=faker.last_name(),
+        subject=random.choice([subject.value for subject in Subjects]),
+    )
     teacher_response = university_services.creat_teacher(teacher_request=teacher)
     return teacher_response
 
@@ -106,7 +101,8 @@ def student(university_api_utils_admin, group):
         email=faker.email(),
         degree=random.choice([option for option in DegreeEnum]),
         phone=faker.numerify("+7##########"),
-        group_id=group.id)
+        group_id=group.id,
+    )
 
     student_response = university_services.create_student(student_request=student)
     return student_response

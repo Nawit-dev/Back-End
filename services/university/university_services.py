@@ -1,25 +1,26 @@
+import os
+
+from utils.api_utils import ApiUtils
+
 from services.general.base_services import BaseService
+from services.university.helpers.grades_helper import GradesHelper
 from services.university.helpers.group_helper import GroupHelper
 from services.university.helpers.student_helper import StudentHelper
-from services.university.helpers.grades_helper import GradesHelper
+from services.university.helpers.teacher_helper import TeacherHelper
 from services.university.models.grades_request import GradesRequest
 from services.university.models.grades_responses import GradesResponses
 from services.university.models.grades_stats_request import GradesStatsRequest
 from services.university.models.grades_stats_responses import GradesStatsResponse
-from services.university.models.group_response import GroupResponse, DeleteStudentResponse
-from services.university.models.group_request import GroupRequest, GroupDetailRequest
-from services.university.models.student_request import StudentRequest, StudentDetailRequest
+from services.university.models.group_request import GroupDetailRequest, GroupRequest
+from services.university.models.group_response import DeleteStudentResponse, GroupResponse
+from services.university.models.student_request import StudentDetailRequest, StudentRequest
 from services.university.models.student_response import StudentResponse
 from services.university.models.teacher_request import TeacherRequest
 from services.university.models.teacher_response import TeacherResponse
-from services.university.helpers.teacher_helper import TeacherHelper
-from utils.api_utils import ApiUtils
-import os
 
 
 class UniversityService(BaseService):
     SERVICE_URL = os.getenv("SERVICE_URL", "http://192.168.0.104:8001")
-
 
     def __init__(self, api_utils: ApiUtils):
         super().__init__(api_utils)

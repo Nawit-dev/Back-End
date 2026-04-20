@@ -48,6 +48,8 @@ ignore = [
     "RUF002",
     "RUF003",
     "S110",
+    "S101",
+    "S311"
 ]
 exclude = [
     "src/tests/**",

@@ -1,7 +1,6 @@
 from enum import StrEnum
 
-from pydantic import BaseModel, ConfigDict
-from pydantic import EmailStr
+from pydantic import BaseModel, ConfigDict, EmailStr
 
 
 class DegreeEnum(StrEnum):

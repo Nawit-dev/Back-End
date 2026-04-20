@@ -1,6 +1,6 @@
-from services.university.models.grade_limits import GradeLimits
-
 from pydantic import BaseModel, ConfigDict, Field
+
+from services.university.models.grade_limits import GradeLimits
 
 
 class BaseGrades(BaseModel):

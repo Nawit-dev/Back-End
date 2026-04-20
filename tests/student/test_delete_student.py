@@ -9,6 +9,5 @@ class TestDeleteStudent:
         response = university_services.delete_student(StudentDetailRequest(student_id=student.id))
 
         assert response.detail == "Student deleted", (
-            f"Wrong response detail. Actual: '{response.detail}', "
-            f"expected: 'Student deleted'"
+            f"Wrong response detail. Actual: '{response.detail}', expected: 'Student deleted'"
         )

@@ -1,5 +1,5 @@
-import requests
 import allure
+import requests
 from services.university.helpers.grades_helper import GradesHelper
 
 
@@ -11,5 +11,6 @@ class TestGetGrades:
         with allure.step("Отправляем запрос на получение оценок"):
             response = grades_helper.get_grades()
         with allure.step("Проверяем статус код"):
-            assert response.status_code == requests.status_codes.codes.ok, \
+            assert response.status_code == requests.status_codes.codes.ok, (
                 f"Expected 200 OK, got {response.status_code}. Response: {response.text}"
+            )

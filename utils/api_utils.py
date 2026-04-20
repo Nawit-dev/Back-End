@@ -2,8 +2,9 @@ import json
 
 import curlify
 import requests
-from requests import Session
 from logger.logger import Logger
+from requests import Session
+
 from utils.json_utils import JsonUtils
 
 

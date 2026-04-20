@@ -1,5 +1,6 @@
-import allure
 from http import HTTPStatus
+
+import allure
 from services.university.helpers.grades_helper import GradesHelper
 
 
@@ -11,5 +12,6 @@ class TestGetGradesStats:
         with allure.step("Отправляем запрос на получение статистики по оценкам"):
             response = stats_grades.get_stats()
         with allure.step("Проверяем статус код"):
-            assert response.status_code == HTTPStatus.OK, \
+            assert response.status_code == HTTPStatus.OK, (
                 f"Expected 200 OK, got {response.status_code}. Response: {response.text}"
+            )

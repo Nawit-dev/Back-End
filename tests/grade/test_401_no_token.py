@@ -1,6 +1,5 @@
-import requests
 import allure
-
+import requests
 from services.university.helpers.grades_helper import GradesHelper
 
 
@@ -12,5 +11,6 @@ class TestGradesStatsAuth:
         with allure.step("Отправляем запрос на получение оценок"):
             response = grades_helper.get_grades()
         with allure.step("Проверяем статус код"):
-            assert response.status_code == requests.status_codes.codes.unauthorized, \
+            assert response.status_code == requests.status_codes.codes.unauthorized, (
                 f"Expected 401 Unauthorized, got {response.status_code}. Response: {response.text}"
+            )

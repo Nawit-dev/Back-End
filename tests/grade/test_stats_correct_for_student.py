@@ -1,6 +1,6 @@
 import random
-import allure
 
+import allure
 from services.university.models.grade_limits import GradeLimits
 from services.university.models.grades_request import GradesRequest
 from services.university.models.grades_stats_request import GradesStatsRequest
@@ -17,9 +17,8 @@ class TestStatsCorrectForStudent:
         with allure.step("Создаём 5 оценок студенту"):
             for _ in range(5):
                 grade = GradesRequest(
-                    teacher_id=teacher.id,
-                    student_id=student.id,
-                    grade=random.randint(GradeLimits.MIN, GradeLimits.MAX))
+                    teacher_id=teacher.id, student_id=student.id, grade=random.randint(GradeLimits.MIN, GradeLimits.MAX)
+                )
             grades_responses = university_services.creat_grades(grades_request=grade)
             grades.append(grades_responses.grade)
         with allure.step(f"Полученные оценки: {grades}"):
@@ -30,11 +29,7 @@ class TestStatsCorrectForStudent:
         min_grade = min(grades)
         avg_grade = sum(grades) / len(grades)
 
-        grade_stats = GradesStatsRequest(
-            teacher_id=teacher.id,
-            student_id=student.id,
-            group_id=student.group_id
-        )
+        grade_stats = GradesStatsRequest(teacher_id=teacher.id, student_id=student.id, group_id=student.group_id)
         with allure.step("Запрашиваем статистику оценок"):
             response_grade_stats = university_services.get_stats_grades(grade_stats)
         with allure.step(f"Ответ статистики: {response_grade_stats}"):
