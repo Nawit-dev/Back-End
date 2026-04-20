@@ -1,5 +1,6 @@
 import os
 
+from services.general.base_services import BaseService
 from utils.api_utils import ApiUtils
 
 from services.auth.helpers.authorization_helper import AuthorizationHelper
@@ -15,10 +16,13 @@ SERVICE_URL = os.getenv(
 )
 
 
-def __init__(self, api_utils: ApiUtils):
-    super().__init__(api_utils)
-    self.authorization_helper = AuthorizationHelper(self.api_utils)
-    self.user_helper = UserHelper(self.api_utils)
+class AuthServices(BaseService):
+    SERVICE_URL = os.getenv("AUTH_SERVICE_API_URL")
+
+    def __init__(self, api_utils: ApiUtils):
+        super().__init__(api_utils)
+        self.authorization_helper = AuthorizationHelper(self.api_utils)
+        self.user_helper = UserHelper(self.api_utils)
 
 
 def register_user(self, register_request: RegisterRequest) -> SuccessResponse:
