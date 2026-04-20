@@ -1,0 +1,17 @@
+[2026-04-20 11:20:29,592] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=rhondascott&password=%29Jmw8EpuzD06ye%29%26YazPTR%26ldO%24i%28p&password_repeat=%29Jmw8EpuzD06ye%29%26YazPTR%26ldO%24i%28p&email=karenwright%40example.com' http://localhost:8000/auth/register/
+[2026-04-20 11:20:29,592] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.302158' 
+ {
+  "detail": "User registered"
+}
+
+[2026-04-20 11:20:29,950] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 72' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=rhondascott&password=%29Jmw8EpuzD06ye%29%26YazPTR%26ldO%24i%28p' http://localhost:8000/auth/login/
+[2026-04-20 11:20:29,951] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.317859' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoicmhvbmRhc2NvdHQiLCJleHAiOjE3NzY2OTEyMjksImlhdCI6MTc3NjY4NDAyOX0.aij6KHTaT6CmWp2Vc7iR317x1609t5BV5ajH-X02OEJZ04EohGVTMGqhVOOfp4dLwrbcv5wszTsHzqy2BQ8LpYC0qfll3aFry7i4YQ8m_VCPewEH90PYrqqaZM6sPY-5yd3Axo-ms11HnedwLJNmpmC8yYY9yFjJK6AwCvPEQild4jxljHTdnSrAoBzJyE4XO6eBfiFYghEIwur6-n7_xjzkE0bgVQ4dB085MUyjVqvPaBaMCGCrjIXRNYsTk_RZsG7qrDE9Rg52u_Fx-vt37LVXrPIJVq1y2OiAi3Om9XlGPaNWwYxn_-IuEQENEqrthe8zR1FiEMG5aV3LLpB0MA",
+  "token_type": "Bearer"
+}
+
+[2026-04-20 11:20:29,984] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoicmhvbmRhc2NvdHQiLCJleHAiOjE3NzY2OTEyMjksImlhdCI6MTc3NjY4NDAyOX0.aij6KHTaT6CmWp2Vc7iR317x1609t5BV5ajH-X02OEJZ04EohGVTMGqhVOOfp4dLwrbcv5wszTsHzqy2BQ8LpYC0qfll3aFry7i4YQ8m_VCPewEH90PYrqqaZM6sPY-5yd3Axo-ms11HnedwLJNmpmC8yYY9yFjJK6AwCvPEQild4jxljHTdnSrAoBzJyE4XO6eBfiFYghEIwur6-n7_xjzkE0bgVQ4dB085MUyjVqvPaBaMCGCrjIXRNYsTk_RZsG7qrDE9Rg52u_Fx-vt37LVXrPIJVq1y2OiAi3Om9XlGPaNWwYxn_-IuEQENEqrthe8zR1FiEMG5aV3LLpB0MA' http://localhost:8001/grades/
+[2026-04-20 11:20:29,984] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.031425' 
+ []
+

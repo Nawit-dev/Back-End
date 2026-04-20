@@ -1,0 +1,35 @@
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 148' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=bmatthews&password=lFX_QkV9EaCUWiA%2AygbMF5qc%28T7tbt&password_repeat=lFX_QkV9EaCUWiA%2AygbMF5qc%28T7tbt&email=teresacrawford%40example.com' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:30 Response status code: 201, elapsed_time= '0:00:00.273778' 
+ {
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 62' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=bmatthews&password=lFX_QkV9EaCUWiA%2AygbMF5qc%28T7tbt' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:30 Response status code: 200, elapsed_time= '0:00:00.314676' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiYm1hdHRoZXdzIiwiZXhwIjoxNzc2NjkxMjMyLCJpYXQiOjE3NzY2ODQwMzJ9.cW-To1NRi-DPWj8pj-OBQUCy3TZf51__UKFeEpjgagw9t8jU9UTV3G3FZz8pYXgqmSnZdNFF3f-9X5y0fJzhYkxw2Utg4-PcS93dXPAPyjT6Wx5t_u4_iOE4xw0gJfQWGMJllRtXYjBBVtaZAi7WypHqaqhEvmGCiATiBllzRq9yR6EGa8B8r_NQiUm10Ph4kq6hILgCVuCPvYCIYMTiVfJGJ16C08gQRHVekEy5trQAqP4TLmBPhQgHsp7qEGJz8Pfsv4i4H2Lp-YcyZOIMKMVLt_qA64EJ8jXIO8ygjVXMxJLFgLf2ridCZIWhgdabmM_1Kt0AiisWHz9JtmYjGQ",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiYm1hdHRoZXdzIiwiZXhwIjoxNzc2NjkxMjMyLCJpYXQiOjE3NzY2ODQwMzJ9.cW-To1NRi-DPWj8pj-OBQUCy3TZf51__UKFeEpjgagw9t8jU9UTV3G3FZz8pYXgqmSnZdNFF3f-9X5y0fJzhYkxw2Utg4-PcS93dXPAPyjT6Wx5t_u4_iOE4xw0gJfQWGMJllRtXYjBBVtaZAi7WypHqaqhEvmGCiATiBllzRq9yR6EGa8B8r_NQiUm10Ph4kq6hILgCVuCPvYCIYMTiVfJGJ16C08gQRHVekEy5trQAqP4TLmBPhQgHsp7qEGJz8Pfsv4i4H2Lp-YcyZOIMKMVLt_qA64EJ8jXIO8ygjVXMxJLFgLf2ridCZIWhgdabmM_1Kt0AiisWHz9JtmYjGQ' -H 'Content-Length: 25' -H 'Content-Type: application/json' -d '{"name": "Douglas Silva"}' http://localhost:8001/groups/
+INFO     Logger:logger.py:30 Response status code: 201, elapsed_time= '0:00:00.010968' 
+ {
+  "name": "Douglas Silva",
+  "id": 3
+}
+
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiYm1hdHRoZXdzIiwiZXhwIjoxNzc2NjkxMjMyLCJpYXQiOjE3NzY2ODQwMzJ9.cW-To1NRi-DPWj8pj-OBQUCy3TZf51__UKFeEpjgagw9t8jU9UTV3G3FZz8pYXgqmSnZdNFF3f-9X5y0fJzhYkxw2Utg4-PcS93dXPAPyjT6Wx5t_u4_iOE4xw0gJfQWGMJllRtXYjBBVtaZAi7WypHqaqhEvmGCiATiBllzRq9yR6EGa8B8r_NQiUm10Ph4kq6hILgCVuCPvYCIYMTiVfJGJ16C08gQRHVekEy5trQAqP4TLmBPhQgHsp7qEGJz8Pfsv4i4H2Lp-YcyZOIMKMVLt_qA64EJ8jXIO8ygjVXMxJLFgLf2ridCZIWhgdabmM_1Kt0AiisWHz9JtmYjGQ' 'http://localhost:8001/groups/?group_id=3'
+INFO     Logger:logger.py:30 Response status code: 200, elapsed_time= '0:00:00.006943' 
+ [
+  {
+    "name": "Jamie Curtis",
+    "id": 1
+  },
+  {
+    "name": "Julie Garcia",
+    "id": 2
+  },
+  {
+    "name": "Douglas Silva",
+    "id": 3
+  }
+]
