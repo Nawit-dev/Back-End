@@ -1,0 +1,22 @@
+[2026-04-20 11:12:23,072] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 158' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=lutzanthony&password=p2Wm0Np_%40I3K%26FeX%5E_xT%29_%21s4l87Sy&password_repeat=p2Wm0Np_%40I3K%26FeX%5E_xT%29_%21s4l87Sy&email=bradydavis%40example.com' http://localhost:8000/auth/register/
+[2026-04-20 11:12:23,072] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.307393' 
+ {
+  "detail": "User registered"
+}
+
+[2026-04-20 11:12:23,465] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=lutzanthony&password=p2Wm0Np_%40I3K%26FeX%5E_xT%29_%21s4l87Sy' http://localhost:8000/auth/login/
+[2026-04-20 11:12:23,465] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.352070' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoibHV0emFudGhvbnkiLCJleHAiOjE3NzY2OTA3NDMsImlhdCI6MTc3NjY4MzU0M30.N0_VRfoPNl-lgAxCbwYMWI_Jx6Ds9R9kWxXV5ZvWMNUf48XNp6Jb9kenJWS_qNni7sT5pGW-ILkOd709jQYwenQeGpInlTjyCly6m4Ds14oJpyHQD2AXZXx0CGxKSBdmEQ5uNkdTRsj-sc4jcdD7wRab5k70sqLb0TnCUv9ZkbNflz1COjkba69kw18sEXy8sFFz0ryhqal5hFRke989plPMiPYhegPYBnnSo5REnuXkyujuiAjR-xDhRDuDH_eNgTmdP8Twt4swGXNhNwQ5RU2wuJNVvOw2B6USpt7M1XDpQxjPDgY1Uxx6FcWeLqMDEFKTLCHu_7GCuUFNk1O9gg",
+  "token_type": "Bearer"
+}
+
+[2026-04-20 11:12:23,477] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoibHV0emFudGhvbnkiLCJleHAiOjE3NzY2OTA3NDMsImlhdCI6MTc3NjY4MzU0M30.N0_VRfoPNl-lgAxCbwYMWI_Jx6Ds9R9kWxXV5ZvWMNUf48XNp6Jb9kenJWS_qNni7sT5pGW-ILkOd709jQYwenQeGpInlTjyCly6m4Ds14oJpyHQD2AXZXx0CGxKSBdmEQ5uNkdTRsj-sc4jcdD7wRab5k70sqLb0TnCUv9ZkbNflz1COjkba69kw18sEXy8sFFz0ryhqal5hFRke989plPMiPYhegPYBnnSo5REnuXkyujuiAjR-xDhRDuDH_eNgTmdP8Twt4swGXNhNwQ5RU2wuJNVvOw2B6USpt7M1XDpQxjPDgY1Uxx6FcWeLqMDEFKTLCHu_7GCuUFNk1O9gg' -H 'Content-Length: 68' -H 'Content-Type: application/json' -d '{"first_name": "Eric", "last_name": "Allen", "subject": "Geography"}' http://localhost:8001/teachers/
+[2026-04-20 11:12:23,477] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.010059' 
+ {
+  "first_name": "Eric",
+  "last_name": "Allen",
+  "subject": "Geography",
+  "id": 3
+}
+

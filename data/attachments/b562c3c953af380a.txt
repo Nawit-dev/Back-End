@@ -1,0 +1,64 @@
+[2026-04-20 11:12:21,482] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=tabithatorres&password=8jRKiRuyZ%5EIe6lVuG%28%2BMlEo%24NW7BHE&password_repeat=8jRKiRuyZ%5EIe6lVuG%28%2BMlEo%24NW7BHE&email=scott08%40example.com' http://localhost:8000/auth/register/
+[2026-04-20 11:12:21,482] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.307155' 
+ {
+  "detail": "User registered"
+}
+
+[2026-04-20 11:12:21,875] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 70' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=tabithatorres&password=8jRKiRuyZ%5EIe6lVuG%28%2BMlEo%24NW7BHE' http://localhost:8000/auth/login/
+[2026-04-20 11:12:21,875] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.352280' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoidGFiaXRoYXRvcnJlcyIsImV4cCI6MTc3NjY5MDc0MSwiaWF0IjoxNzc2NjgzNTQxfQ.cA5nKlHGOZ-wr3wb6CSNNR7-pidZD5UYNHX0eYTz2sWXOjA_46IpyGKq_1I1XTJ3L54sXr_O2C5OqEa8FxHe56KUlzUHl34sPO3DvUdvqs10a1r20WbUwEN-UeSwl1e3IDDFBg4UrKo3cbMwcb06HOMEweMzJ_2zdR7cniWrcwJubf7cwI8hzxRm2ScKTFvHC5l1iGu_2MppLnAmIqkesOxZ-ToAnuzeTD9JJJD73EQsD88ISLXEQGfr1aO5pZcAyCvLRE_p6GdnBih9dCx16kNlVegaqCjZl6miVE6ur-5n-ig_4d7hIEdhdHs-lY_s7hfUjUc1tOeUXopplv3loQ",
+  "token_type": "Bearer"
+}
+
+[2026-04-20 11:12:21,887] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoidGFiaXRoYXRvcnJlcyIsImV4cCI6MTc3NjY5MDc0MSwiaWF0IjoxNzc2NjgzNTQxfQ.cA5nKlHGOZ-wr3wb6CSNNR7-pidZD5UYNHX0eYTz2sWXOjA_46IpyGKq_1I1XTJ3L54sXr_O2C5OqEa8FxHe56KUlzUHl34sPO3DvUdvqs10a1r20WbUwEN-UeSwl1e3IDDFBg4UrKo3cbMwcb06HOMEweMzJ_2zdR7cniWrcwJubf7cwI8hzxRm2ScKTFvHC5l1iGu_2MppLnAmIqkesOxZ-ToAnuzeTD9JJJD73EQsD88ISLXEQGfr1aO5pZcAyCvLRE_p6GdnBih9dCx16kNlVegaqCjZl6miVE6ur-5n-ig_4d7hIEdhdHs-lY_s7hfUjUc1tOeUXopplv3loQ' -H 'Content-Length: 25' -H 'Content-Type: application/json' -d '{"name": "Tammy Alvarez"}' http://localhost:8001/groups/
+[2026-04-20 11:12:21,887] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.010590' 
+ {
+  "name": "Tammy Alvarez",
+  "id": 5
+}
+
+[2026-04-20 11:12:21,937] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoidGFiaXRoYXRvcnJlcyIsImV4cCI6MTc3NjY5MDc0MSwiaWF0IjoxNzc2NjgzNTQxfQ.cA5nKlHGOZ-wr3wb6CSNNR7-pidZD5UYNHX0eYTz2sWXOjA_46IpyGKq_1I1XTJ3L54sXr_O2C5OqEa8FxHe56KUlzUHl34sPO3DvUdvqs10a1r20WbUwEN-UeSwl1e3IDDFBg4UrKo3cbMwcb06HOMEweMzJ_2zdR7cniWrcwJubf7cwI8hzxRm2ScKTFvHC5l1iGu_2MppLnAmIqkesOxZ-ToAnuzeTD9JJJD73EQsD88ISLXEQGfr1aO5pZcAyCvLRE_p6GdnBih9dCx16kNlVegaqCjZl6miVE6ur-5n-ig_4d7hIEdhdHs-lY_s7hfUjUc1tOeUXopplv3loQ' -H 'Content-Length: 147' -H 'Content-Type: application/json' -d '{"first_name": "Krystal", "last_name": "Walsh", "email": "heatherwhite@example.org", "degree": "Associate", "phone": "+73939251697", "group_id": 5}' http://localhost:8001/students/
+[2026-04-20 11:12:21,937] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.008548' 
+ {
+  "first_name": "Krystal",
+  "last_name": "Walsh",
+  "email": "heatherwhite@example.org",
+  "degree": "Associate",
+  "phone": "+73939251697",
+  "group_id": 5,
+  "id": 4
+}
+
+[2026-04-20 11:12:21,987] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjcsInVzZXJuYW1lIjoidGFiaXRoYXRvcnJlcyIsImV4cCI6MTc3NjY5MDc0MSwiaWF0IjoxNzc2NjgzNTQxfQ.cA5nKlHGOZ-wr3wb6CSNNR7-pidZD5UYNHX0eYTz2sWXOjA_46IpyGKq_1I1XTJ3L54sXr_O2C5OqEa8FxHe56KUlzUHl34sPO3DvUdvqs10a1r20WbUwEN-UeSwl1e3IDDFBg4UrKo3cbMwcb06HOMEweMzJ_2zdR7cniWrcwJubf7cwI8hzxRm2ScKTFvHC5l1iGu_2MppLnAmIqkesOxZ-ToAnuzeTD9JJJD73EQsD88ISLXEQGfr1aO5pZcAyCvLRE_p6GdnBih9dCx16kNlVegaqCjZl6miVE6ur-5n-ig_4d7hIEdhdHs-lY_s7hfUjUc1tOeUXopplv3loQ' 'http://localhost:8001/students/?student_id=4'
+[2026-04-20 11:12:21,987] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.008444' 
+ [
+  {
+    "first_name": "Ashley",
+    "last_name": "Montgomery",
+    "email": "tonyahines@example.net",
+    "degree": "Master",
+    "phone": "+75217025777",
+    "group_id": 1,
+    "id": 1
+  },
+  {
+    "first_name": "Joshua",
+    "last_name": "Anderson",
+    "email": "hesterglenda@example.net",
+    "degree": "Master",
+    "phone": "+74945355677",
+    "group_id": 2,
+    "id": 2
+  },
+  {
+    "first_name": "Krystal",
+    "last_name": "Walsh",
+    "email": "heatherwhite@example.org",
+    "degree": "Associate",
+    "phone": "+73939251697",
+    "group_id": 5,
+    "id": 4
+  }
+]
+

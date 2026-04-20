@@ -1,0 +1,22 @@
+[2026-04-20 11:12:17,355] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 163' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=eric19&password=n%2BXtA_wx%23ca%5E83S%24yQ49%21IN6%40%28Qvq%2B&password_repeat=n%2BXtA_wx%23ca%5E83S%24yQ49%21IN6%40%28Qvq%2B&email=marcus37%40example.com' http://localhost:8000/auth/register/
+[2026-04-20 11:12:17,356] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.307700' 
+ {
+  "detail": "User registered"
+}
+
+[2026-04-20 11:12:17,749] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 71' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=eric19&password=n%2BXtA_wx%23ca%5E83S%24yQ49%21IN6%40%28Qvq%2B' http://localhost:8000/auth/login/
+[2026-04-20 11:12:17,749] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.352690' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZXJpYzE5IiwiZXhwIjoxNzc2NjkwNzM3LCJpYXQiOjE3NzY2ODM1Mzd9.NyRSlWSKXLMTyfT_7hHuHgacrQfErJ4oGtTGiwdOHE4XNCfTEBYd7DVujXu0iD1SrHBud1mAGwC-hz3QjDfM-SfKhE30CIskjwZ0B8BUs4G1xEJn9BkoO7pHE-DE1HwofF3AFjQ8GwUEis4hiLCLjQBc6ZEIa1Og59VotwTePeX9e4DfFW1nR7jXj7pZVKktvwrDVdePwr-9chGr8u-wzwySJNV9RgxVJpdc_qNiqWFb-emrmCrPla0394A1Bv-kwJtHbndA2Sg3uNwmHstEzj8zOdlxx4c105OBA6E4gq4sovQTZF56iMBVJ4VcowrXtUxo7VDtl7iYutY3eo1sWg",
+  "token_type": "Bearer"
+}
+
+[2026-04-20 11:12:17,762] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiZXJpYzE5IiwiZXhwIjoxNzc2NjkwNzM3LCJpYXQiOjE3NzY2ODM1Mzd9.NyRSlWSKXLMTyfT_7hHuHgacrQfErJ4oGtTGiwdOHE4XNCfTEBYd7DVujXu0iD1SrHBud1mAGwC-hz3QjDfM-SfKhE30CIskjwZ0B8BUs4G1xEJn9BkoO7pHE-DE1HwofF3AFjQ8GwUEis4hiLCLjQBc6ZEIa1Og59VotwTePeX9e4DfFW1nR7jXj7pZVKktvwrDVdePwr-9chGr8u-wzwySJNV9RgxVJpdc_qNiqWFb-emrmCrPla0394A1Bv-kwJtHbndA2Sg3uNwmHstEzj8zOdlxx4c105OBA6E4gq4sovQTZF56iMBVJ4VcowrXtUxo7VDtl7iYutY3eo1sWg' http://localhost:8001/grades/stats/
+[2026-04-20 11:12:17,762] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.010948' 
+ {
+  "count": 0,
+  "min": null,
+  "max": null,
+  "avg": null
+}
+

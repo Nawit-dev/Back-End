@@ -1,0 +1,37 @@
+[2026-04-20 11:12:19,885] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 153' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=cindy23&password=YrLyX%21zt8NPXI1%23_hdKc1%21IqLydnE%40&password_repeat=YrLyX%21zt8NPXI1%23_hdKc1%21IqLydnE%40&email=dennistrevino%40example.org' http://localhost:8000/auth/register/
+[2026-04-20 11:12:19,885] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.307637' 
+ {
+  "detail": "User registered"
+}
+
+[2026-04-20 11:12:20,279] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 64' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=cindy23&password=YrLyX%21zt8NPXI1%23_hdKc1%21IqLydnE%40' http://localhost:8000/auth/login/
+[2026-04-20 11:12:20,279] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.352878' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiY2luZHkyMyIsImV4cCI6MTc3NjY5MDc0MCwiaWF0IjoxNzc2NjgzNTQwfQ.ZQxZmHsgG9hnUL9w4igWAwqEYljJvtUQCU5YZUfaVAkxunfq5aDbK_ckt74pXnjnoTxT68SlEqTzQjqpoRTyBHc0ZE5UcwscK0f-dnnefilA4BJGWZ_RXlYovqY49VIBRhw6cONudVv41_B9_exmJw30EHFJiKlNm3c5fi58QDAmsUsRUZYDV7s-byMLq8NmKg51h90xs3DMqGx_jmv9MJOob22YXnUvEKifiOgSZIwrxloUlNLVCnm_z5QtQZfXrOCG7CFW6PWyheXokTLNdnASwjYh8L3AwVm_RHzJzoLhjY5_D7N9MQOjIog55lb8D_aTpdS5ZYsknx5TBn0c7w",
+  "token_type": "Bearer"
+}
+
+[2026-04-20 11:12:20,292] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiY2luZHkyMyIsImV4cCI6MTc3NjY5MDc0MCwiaWF0IjoxNzc2NjgzNTQwfQ.ZQxZmHsgG9hnUL9w4igWAwqEYljJvtUQCU5YZUfaVAkxunfq5aDbK_ckt74pXnjnoTxT68SlEqTzQjqpoRTyBHc0ZE5UcwscK0f-dnnefilA4BJGWZ_RXlYovqY49VIBRhw6cONudVv41_B9_exmJw30EHFJiKlNm3c5fi58QDAmsUsRUZYDV7s-byMLq8NmKg51h90xs3DMqGx_jmv9MJOob22YXnUvEKifiOgSZIwrxloUlNLVCnm_z5QtQZfXrOCG7CFW6PWyheXokTLNdnASwjYh8L3AwVm_RHzJzoLhjY5_D7N9MQOjIog55lb8D_aTpdS5ZYsknx5TBn0c7w' -H 'Content-Length: 28' -H 'Content-Type: application/json' -d '{"name": "Allison Williams"}' http://localhost:8001/groups/
+[2026-04-20 11:12:20,292] - [INFO] - Response status code: 201, elapsed_time= '0:00:00.010676' 
+ {
+  "name": "Allison Williams",
+  "id": 3
+}
+
+[2026-04-20 11:12:20,339] - [INFO] - Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjUsInVzZXJuYW1lIjoiY2luZHkyMyIsImV4cCI6MTc3NjY5MDc0MCwiaWF0IjoxNzc2NjgzNTQwfQ.ZQxZmHsgG9hnUL9w4igWAwqEYljJvtUQCU5YZUfaVAkxunfq5aDbK_ckt74pXnjnoTxT68SlEqTzQjqpoRTyBHc0ZE5UcwscK0f-dnnefilA4BJGWZ_RXlYovqY49VIBRhw6cONudVv41_B9_exmJw30EHFJiKlNm3c5fi58QDAmsUsRUZYDV7s-byMLq8NmKg51h90xs3DMqGx_jmv9MJOob22YXnUvEKifiOgSZIwrxloUlNLVCnm_z5QtQZfXrOCG7CFW6PWyheXokTLNdnASwjYh8L3AwVm_RHzJzoLhjY5_D7N9MQOjIog55lb8D_aTpdS5ZYsknx5TBn0c7w' 'http://localhost:8001/groups/?group_id=3'
+[2026-04-20 11:12:20,339] - [INFO] - Response status code: 200, elapsed_time= '0:00:00.006435' 
+ [
+  {
+    "name": "Richard Hernandez",
+    "id": 1
+  },
+  {
+    "name": "Heather Young",
+    "id": 2
+  },
+  {
+    "name": "Allison Williams",
+    "id": 3
+  }
+]
+
