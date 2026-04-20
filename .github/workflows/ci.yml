@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          poetry install
+
+      # 1. Ruff
+      - name: Ruff check
+        run: poetry run ruff check .
+
+      # 2. Start docker services
+      - name: Start services
+        run: docker compose up -d
+
+      # 3. Wait services
+      - name: Wait for services
+        run: |
+          sleep 20
+          docker ps
+
+      # 4. Tests
+      - name: Run tests with Allure
+        run: poetry run pytest --alluredir=allure-results
+
+      # 5. Install Allure
+      - name: Install Allure
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y default-jre
+          wget https://github.com/allure-framework/allure2/releases/latest/download/allure-2.27.0.tgz
+          tar -xzf allure-2.27.0.tgz
+          sudo mv allure-2.27.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/bin/allure
+
+      # 6. Generate report
+      - name: Generate Allure report
+        run: allure generate allure-results -o allure-report --clean
+
+      # 7. Deploy to GitHub Pages
+      - name: Deploy report
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
