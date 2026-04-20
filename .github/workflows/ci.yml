@@ -8,6 +8,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # ✅ ДОБАВИЛИ ENV ТУТ
+    env:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB_AUTH: auth
+      POSTGRES_DB_UNIVERSITY: university
+
+      AUTH_SERVICE_INTERNAL_URL: http://auth:8000
+      AUTH_SERVICE_API_URL: http://auth:8000
+
+      UNIVERSITY_SERVICE_INTERNAL_URL: http://university:8000
+      UNIVERSITY_SERVICE_API_URL: http://university:8001
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -36,7 +49,7 @@ jobs:
 
       # 4. Tests
       - name: Run tests with Allure
-        run: poetry run pytest --alluredir=allure-results
+        run: pytest --alluredir=allure-results
 
       # 5. Install Allure
       - name: Install Allure
