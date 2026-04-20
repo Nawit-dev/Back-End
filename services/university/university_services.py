@@ -22,7 +22,7 @@ from services.university.models.teacher_response import TeacherResponse
 class UniversityService(BaseService):
     SERVICE_URL = os.getenv(
         "UNIVERSITY_SERVICE_API_URL",
-        "http://university:8000"
+        "http://localhost:8001"
     )
 
     def __init__(self, api_utils: ApiUtils):
