@@ -1,0 +1,20 @@
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 156' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=ppotts&password=pr%5Ei%23M%2BeXRLwu3%2BNWmJHwupyC%409%29ol&password_repeat=pr%5Ei%23M%2BeXRLwu3%2BNWmJHwupyC%409%29ol&email=cwilliams%40example.org' http://localhost:8000/auth/register/
+INFO     Logger:logger.py:30 Response status code: 201, elapsed_time= '0:00:00.274159' 
+ {
+  "detail": "User registered"
+}
+
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Content-Length: 67' -H 'Content-Type: application/x-www-form-urlencoded' -d 'username=ppotts&password=pr%5Ei%23M%2BeXRLwu3%2BNWmJHwupyC%409%29ol' http://localhost:8000/auth/login/
+INFO     Logger:logger.py:30 Response status code: 200, elapsed_time= '0:00:00.313028' 
+ {
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoicHBvdHRzIiwiZXhwIjoxNzc2Njk3MzgxLCJpYXQiOjE3NzY2OTAxODF9.kOm1awAH6kkqEsZXYSKrnHuQNFSmGSbFQM3cCZkmQtOpqoQp6RVInMILVFrcemgxQdXLbkoTooO9TKsrXKnh5fZ5zGuN-icSJ7aZXEI0yZNx70oubeBY4abllOLj6sK8F0zz9eDUdeI-4wJy_9zko1aSmubiSWz2imiwkm51aWLB5sLfro5KjJCxbooWb3qAp76EWqhHHcOZVWbbNGb9ElKjSswhsgTDJNuocfZwR3XzSSzUMv-nT2zvdDDlRxBYZ23w_74r-zQ409ESoa7DeiGH2mbQh5gU8yOog45KdP08p6Y5Cp5wLdcoWlWAuLHcrdZFbO8EVzhrigPp84RwDg",
+  "token_type": "Bearer"
+}
+INFO     Logger:logger.py:30 Request: curl -H 'User-Agent: python-requests/2.33.1' -H 'Accept-Encoding: gzip, deflate' -H 'Accept: */*' -H 'Connection: keep-alive' -H 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjksInVzZXJuYW1lIjoicHBvdHRzIiwiZXhwIjoxNzc2Njk3MzgxLCJpYXQiOjE3NzY2OTAxODF9.kOm1awAH6kkqEsZXYSKrnHuQNFSmGSbFQM3cCZkmQtOpqoQp6RVInMILVFrcemgxQdXLbkoTooO9TKsrXKnh5fZ5zGuN-icSJ7aZXEI0yZNx70oubeBY4abllOLj6sK8F0zz9eDUdeI-4wJy_9zko1aSmubiSWz2imiwkm51aWLB5sLfro5KjJCxbooWb3qAp76EWqhHHcOZVWbbNGb9ElKjSswhsgTDJNuocfZwR3XzSSzUMv-nT2zvdDDlRxBYZ23w_74r-zQ409ESoa7DeiGH2mbQh5gU8yOog45KdP08p6Y5Cp5wLdcoWlWAuLHcrdZFbO8EVzhrigPp84RwDg' -H 'Content-Length: 67' -H 'Content-Type: application/json' -d '{"first_name": "Sean", "last_name": "Ward", "subject": "Geography"}' http://localhost:8001/teachers/
+INFO     Logger:logger.py:30 Response status code: 201, elapsed_time= '0:00:00.010130' 
+ {
+  "first_name": "Sean",
+  "last_name": "Ward",
+  "subject": "Geography",
+  "id": 3
+}
