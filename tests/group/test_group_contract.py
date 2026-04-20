@@ -14,4 +14,3 @@ class TestGroupContract:
             f"Wrong status code. Actual: '{response.status_code}', "
             f"but expected: '{requests.status_codes.codes.unauthorized}'"
         )
-

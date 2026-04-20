@@ -8,4 +8,3 @@ class RegisterRequest(BaseModel):
     password: str
     password_repeat: str
     email: EmailStr
-

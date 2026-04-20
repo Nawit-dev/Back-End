@@ -41,4 +41,3 @@ class ApiUtils:
     def delete(self, endpoint_url, **kwargs):
         response = self.session.delete(self.url + endpoint_url, **kwargs)
         return response
-

@@ -23,4 +23,3 @@ class TestTeacherCreate:
             f"Wrong status code. Actual: '{teacher_response.status_code}',"
             f"but expected: '{requests.status_codes.codes.unauthorized}'"
         )
-

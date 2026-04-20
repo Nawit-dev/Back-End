@@ -10,4 +10,3 @@ class UserHelper(BaseHelper):
     def get_me(self) -> requests.Response:
         response = self.api_utils.get(self.ME_ENDPOINT)
         return response
-

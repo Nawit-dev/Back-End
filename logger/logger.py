@@ -48,4 +48,3 @@ class Logger:
     @staticmethod
     def step(msg: str) -> None:
         Logger.__logger.info(msg)
-

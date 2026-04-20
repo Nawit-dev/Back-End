@@ -106,4 +106,3 @@ def student(university_api_utils_admin, group):
 
     student_response = university_services.create_student(student_request=student)
     return student_response
-

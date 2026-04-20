@@ -14,4 +14,3 @@ class TestGetGrades:
             assert response.status_code == requests.status_codes.codes.ok, (
                 f"Expected 200 OK, got {response.status_code}. Response: {response.text}"
             )
-

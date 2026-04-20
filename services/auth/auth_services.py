@@ -31,4 +31,3 @@ class AuthServices(BaseService):
     def login_user(self, login_request: LoginRequest) -> LoginResponse:
         response = self.authorization_helper.post_login(data=login_request.model_dump())
         return LoginResponse(**response.json())
-

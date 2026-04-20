@@ -28,4 +28,3 @@ class TestGetStudent:
             f"group_id mismatch: expected={student.group_id}, actual={response.group_id}",
         )
         sa.finalize()
-

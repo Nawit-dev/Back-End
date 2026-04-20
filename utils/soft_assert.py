@@ -18,4 +18,3 @@ class SoftAssert:
                 self.logger.error(error)
 
             raise AssertionError("\n".join(self.errors))
-
