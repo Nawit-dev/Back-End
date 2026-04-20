@@ -3,6 +3,6 @@ from pydantic import BaseModel, ConfigDict
 
 class BaseGradesStats(BaseModel):
     model_config = ConfigDict(extra="forbid")
-    student_id: None | int
-    teacher_id: None | int
-    group_id: None | int
+    student_id: int | None
+    teacher_id: int | None
+    group_id: int | None

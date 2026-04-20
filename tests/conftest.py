@@ -18,7 +18,7 @@ from utils.api_utils import ApiUtils
 faker = Faker()
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def auth_api_utils_anonym():
     api_utils = ApiUtils(url=AuthServices.SERVICE_URL)
     return api_utils
@@ -30,7 +30,7 @@ def auth_service_readiness():
     start_time = time.time()
     while time.time() < start_time + timeout:
         try:
-            response = requests.get(AuthServices.SERVICE_URL + "/docs")
+            response = requests.get(AuthServices.SERVICE_URL + "/docs", timeout=5)
             response.raise_for_status()
         except requests.exceptions.RequestException:
             time.sleep(1)
@@ -40,13 +40,13 @@ def auth_service_readiness():
         raise RuntimeError(f"Auth service wasn't started during '{timeout}' seconds.")
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def university_api_utils_anonym():
     api_utils = ApiUtils(url=UniversityService.SERVICE_URL)
     return api_utils
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def access_token(auth_api_utils_anonym):
     auth_services = AuthServices(auth_api_utils_anonym)
     username = faker.user_name()
@@ -60,19 +60,19 @@ def access_token(auth_api_utils_anonym):
     return login_response.access_token
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def auth_api_utils_admin(access_token):
     api_utils = ApiUtils(url=AuthServices.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def university_api_utils_admin(access_token):
     api_utils = ApiUtils(url=UniversityService.SERVICE_URL, headers={"Authorization": f"Bearer {access_token}"})
     return api_utils
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def group(university_api_utils_admin):
     university_services = UniversityService(api_utils=university_api_utils_admin)
     group = GroupRequest(name=faker.name())
@@ -80,7 +80,7 @@ def group(university_api_utils_admin):
     return group_response
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def teacher(university_api_utils_admin):
     university_services = UniversityService(api_utils=university_api_utils_admin)
     teacher = TeacherRequest(
@@ -92,14 +92,14 @@ def teacher(university_api_utils_admin):
     return teacher_response
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture
 def student(university_api_utils_admin, group):
     university_services = UniversityService(api_utils=university_api_utils_admin)
     student = StudentRequest(
         first_name=faker.first_name(),
         last_name=faker.last_name(),
         email=faker.email(),
-        degree=random.choice([option for option in DegreeEnum]),
+        degree=random.choice(list(DegreeEnum)),
         phone=faker.numerify("+7##########"),
         group_id=group.id,
     )
