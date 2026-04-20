@@ -1,6 +1,5 @@
 import os
 
-from services.general.base_services import BaseService
 from utils.api_utils import ApiUtils
 
 from services.auth.helpers.authorization_helper import AuthorizationHelper
@@ -8,6 +7,7 @@ from services.auth.helpers.user_helper import UserHelper
 from services.auth.models.login_request import LoginRequest
 from services.auth.models.login_response import LoginResponse
 from services.auth.models.register_request import RegisterRequest
+from services.general.base_services import BaseService
 from services.general.models.success_response import SuccessResponse
 
 SERVICE_URL = os.getenv(
