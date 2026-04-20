@@ -28,7 +28,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    environment: Actions
+    environment: github-pages
     needs: lint
 
     env:
