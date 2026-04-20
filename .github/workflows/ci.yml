@@ -22,7 +22,7 @@ jobs:
 
       # 1. Ruff
       - name: Ruff check
-        run: poetry run ruff check .
+        run: run ruff check .
 
       # 2. Start docker services
       - name: Start services
