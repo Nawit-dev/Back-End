@@ -1,3 +1,10 @@
+[tool.poetry]
+name = "api-tests"
+version = "0.1.0"
+description = ""
+authors = ['Nikita']
+
+
 # Поддержка версии Python
 target-version = "py312"
 
