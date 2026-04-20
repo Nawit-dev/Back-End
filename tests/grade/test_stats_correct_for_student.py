@@ -46,3 +46,4 @@ class TestStatsCorrectForStudent:
         with allure.step("Проверяем avg"):
             sa(response_grade_stats.avg == avg_grade, f"Expected avg {avg_grade}, got {response_grade_stats.avg}")
         sa.finalize()
+

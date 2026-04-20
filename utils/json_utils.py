@@ -9,3 +9,4 @@ class JsonUtils:
         except ValueError:
             return False
         return True
+

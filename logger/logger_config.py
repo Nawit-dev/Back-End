@@ -11,3 +11,4 @@ class LoggerConfig:
     BACKUP_COUNT = 10
     FORMAT = "[%(asctime)s] - [%(levelname)s] - %(message)s"
     DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
+

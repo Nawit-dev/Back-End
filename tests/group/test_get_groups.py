@@ -17,3 +17,4 @@ class TestGetGroups:
         sa(group.id == response.id, f"Group id {group.id} not found in response ids: {response.id}")
         sa(group.name in response.name, f"Group name '{group.name}' not found in response names: {response.name}")
         sa.finalize()
+

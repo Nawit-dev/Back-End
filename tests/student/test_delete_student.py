@@ -11,3 +11,4 @@ class TestDeleteStudent:
         assert response.detail == "Student deleted", (
             f"Wrong response detail. Actual: '{response.detail}', expected: 'Student deleted'"
         )
+

@@ -14,3 +14,4 @@ class TestGradesStatsAuth:
             assert response.status_code == requests.status_codes.codes.unauthorized, (
                 f"Expected 401 Unauthorized, got {response.status_code}. Response: {response.text}"
             )
+
